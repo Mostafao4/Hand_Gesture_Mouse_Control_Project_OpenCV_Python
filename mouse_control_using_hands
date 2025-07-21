@@ -1,15 +1,10 @@
 import cv2
 import pyautogui
-import sys
-import os
-
-# Add the path to the local mediapipe source directory
-mediapipe_path = os.path.abspath("mediapipe.txt")
-if mediapipe_path not in sys.path:
-    sys.path.insert(0, mediapipe_path)
-
+import mediapipe
+ 
 
 camera = cv2.VideoCapture(0)
+capture_hands =mediapipe.solutions.hands()
 while True:
     ret, image= camera.read()
     cv2.imshow("Hand movement video capture",image)
