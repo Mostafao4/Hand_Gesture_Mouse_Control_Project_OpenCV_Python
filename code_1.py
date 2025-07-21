@@ -10,6 +10,7 @@ while True:
     ret, image= camera.read()
     image_height,image_width,_= image.shape
     image= cv2.flip(image,1)
+    
    
     image_rgb= cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
     output_hands= capture_hands.process(image_rgb)
