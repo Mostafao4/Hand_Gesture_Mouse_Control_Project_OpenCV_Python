@@ -5,7 +5,7 @@ import mediapipe
 
 camera = cv2.VideoCapture(0)
 while True:
-    _, image= camera.read()
+    ret, image= camera.read()
     cv2.imshow("Hand movement video capture",image)
     key= cv2.waitKey(100)
     
