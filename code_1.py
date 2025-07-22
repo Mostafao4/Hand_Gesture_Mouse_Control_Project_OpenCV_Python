@@ -36,7 +36,7 @@ while True:
                     cv2.circle(image,(x,y),10,(0,255,255))
         dist=y2-y1
         print(dist) 
-        if(dist<40):
+        if(dist<30):
             pyautogui.click()
             print("click")
     cv2.imshow("Hand movement video capture",image)
